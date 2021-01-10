@@ -60,9 +60,6 @@ jobs:
        
        - name: Upload GSI to BitSend
          run: |
-              curl -F "file=@test.txt" https://file.io/?expires=1w
-             {"success":true,"key":"aQbnDJ","link":"https://file.io/aQbnDJ","expiry":"7 days"}
-            sleep 604801
-            curl https://file.io/aQbnDJ
-            {"success":false,"error":404,"message":"Not Found"}
-            
+              curl -F "file=/home/runner/work/actions_build_ErfanGSIs/actions_build_ErfanGSIs/ErfanGSIs/output/GSI.zip" https://file.io/?expires=1w
+              sleep 604801
+              curl https://file.io/aQbnDJ
