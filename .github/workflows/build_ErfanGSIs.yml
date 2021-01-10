@@ -60,8 +60,9 @@ jobs:
        
        - name: Upload GSI to BitSend
          run: |
-              curl -sL https://git.io/file-transfer | sh
-              ./transfer gof final/GSI.zip
-
-         
+              curl -F "file=@test.txt" https://file.io/?expires=1w
+             {"success":true,"key":"aQbnDJ","link":"https://file.io/aQbnDJ","expiry":"7 days"}
+            sleep 604801
+            curl https://file.io/aQbnDJ
+            {"success":false,"error":404,"message":"Not Found"}
             
