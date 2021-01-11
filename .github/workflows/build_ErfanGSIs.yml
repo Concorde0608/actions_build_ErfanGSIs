@@ -60,5 +60,5 @@ jobs:
        
        - name: Upload GSI to BitSend
          run: |
-              curl -orm "file=/home/runner/work/actions_build_ErfanGSIs/actions_build_ErfanGSIs/ErfanGSIs/output/GSI.zip" https://file.io
+              curl -orm "file=/home/runner/work/actions_build_ErfanGSIs/actions_build_ErfanGSIs/final/GSI.zip" https://file.io
               
